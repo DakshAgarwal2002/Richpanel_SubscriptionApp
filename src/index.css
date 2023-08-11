@@ -1,13 +1,454 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  margin:0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family:Roboto;
+  
+}
+html,body{
+  width: 100%;
+  height: 100%;
+  background-color: #1f4d91;
+}
+#root{
+  width: 100%;
+ height: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+main{
+  width: 450px;
+  max-width: 450px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+main>h3{
+  font-weight: bolder;
+  margin-top: 10px;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 10px;
+
+}
+.form-container{
+  margin: auto 30px;
+}
+input{
+  width: 100%;
+  height: 45px;
+}
+.form-container input[type="password"]{
+  font-size: 15px;
+  letter-spacing: 0.1rem;
+  
+}
+.form-label{
+  font-size:10pt;
+  font-weight: bold;
+  display: block;
+  padding: 0.3rem 0rem 0.3rem 0rem;
+}
+.form-control{
+  width: 100%;
+  /* height: 40px; */
+  padding: 10px;
+  margin-bottom: 1rem;
+  border:none;
+  border: 2px solid rgb(224, 224, 224);
+  border-radius: 5px;
+  
+}
+.checkbox-container{
+  font-size:10.25pt;
+  font-weight: bold;
+}
+
+.checkbox-container input[type="checkbox"] {
+  vertical-align:sub; 
+  width: 18px; 
+  height: 18px;
+  opacity: 0.8;
+  line-height: 1.7;
+
+  margin-right: 10px;
+}
+
+.submit-btn{
+  width: 100%;
+  background-color:#1f4d91;
+  color: #ffffff;
+  /* font-size: large; */
+  border: none;
+  margin-top: 2rem;
+  padding: 15px;
+  border-radius: 5px;
+}
+main p{
+  font-size: 10pt;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 10px;
+}
+main p>a{
+  text-decoration: none;
+  color: #1755b2;
+  font-weight: bold;
+}
+
+/* plan */
+.plan-container{
+  margin:200px 80px; 
+  border-radius: 10px;
+  background-color:#ffffff;
+
+}
+.grid-container {
+  display: grid;
+  padding: 10px;
+  grid-template-columns: repeat(1, 3fr 1fr 1fr 1fr 1fr); 
+  gap: 10px;
+}
+
+.grid-item {
+  padding: 10px;
+  font-size: 10pt;
+}
+.underline{
+  border-bottom: 1px solid #adadad;
+  margin: 0 10px
+}
+.payment-container{
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+.payment-card{
+  margin: 30px;
+}
+.payment-container-2{
+  background-color:#f3f4f6;
+  border-radius: 0px 8px 8px 0px;
+}
+.payment-container .submit-btn {
+  width: 140px;
+  background-color:#1f4d91;
+  color: #ffffff;
+  border: none;
+  margin: auto;
+  padding: 0;
+  border-radius: 5px;
+
+}
+.payment-container table{
+  width: 250px;
+}
+.col2{
+  text-align:end ;
+}
+.payment-container td {
+  padding: 10px 0px;
+  font-weight: 500;
+  font-size: 11px;
+  border-bottom: 2px solid #e6e7ea;
+}
+
+.payment-info {
+  color: #6c757d;
+  font-weight: 500;
+  margin-top: 1.2pt;
+  font-size: 9pt;
+  /* opacity: 0.8; */
+  letter-spacing: 0.2px;
+}
+.payment-btn {
+  width: 40%;
+  background-color: #1f4d91;
+  color: #e3e1e1;
+  border: none;
+  padding: 10px;
+  border-radius: 3px;
+}
+.payment-form {
+  width: 350px;
+}
+
+.card-element-container {
+  margin-top: 10px;
+  border: 2px solid #b9b8b8;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); */
+  margin: 1.2rem 0 1.5rem 0;
+}
+
+.card-element {
+  font-size: 4pt;
+  font-weight: bolder;
+}
+
+
+/* Plan CSS */
+
+.plan-container {
+  padding: 20px;
+  margin: 80px auto;
+  border-radius: 10px;
+  font-weight: bolder;
+  max-width: max-content;
+  background-color: #ffffff;
+}
+.grid-container {
+  width: 100%;
+  display: grid;
+  margin:0;
+  padding: 10px;
+  column-gap: 1rem;
+  grid-template-columns: repeat(1, 2.8fr 1fr 1fr 1fr 1fr);
+}
+
+.grid-item {
+  text-align: center;
+  padding: 10px;
+  font-size: 10pt;
+}
+.grid-item:first-child {
+  /* text-align: left; */
+  /* border: 2px solid #515151; */
+}
+.underline {
+  border-bottom: 1px solid #adadad;
+  /* margin: 0 10px; */
+}
+
+.next-btn {
+  border: none;
+  border-radius: 3px;
+  margin: 2rem 30% 2rem 30%;
+  width: 40%;
+  background-color: #1f4d91;
+  color: #fff;
+  padding: 20px;
+}
+.top-container {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1rem;
+  height: 100px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  border-radius: 3px;
+  padding: 20px;
+  margin-right: 10px;
+  border: 2px solid #1f4d91;
+  background-color: #1f4d91;
+  color: #ffffff;
+  opacity: 0.5;
+  position: relative;
+}
+.top-bar:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+
+.selected {
+  opacity: 1;
+}
+.top-bar:hover:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent transparent #1f4d91 transparent;
+}
+.selected:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent transparent #1f4d91 transparent;
+}
+.top-bar::after {
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+}
+.plan-head{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+/* slider */
+/* ToggleSwitch.css */
+.toggle-switch {
+  display: inline-block;
+  width: 200px;
+  height: 60px;
+  background-color: #1f4d91;
+  border-radius: 40px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 1rem;
+}
+
+.toggle-switch .toggle-thumb {
+  width: 80px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  position: absolute;
+  margin-top: 10px;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s;
+}
+
+.toggle-switch .toggle-labels {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  font-size: 14px;
+  color: #ffff;
+}
+
+.toggle-switch.yearly .toggle-labels span:first-child {
+  color: #fff;
+}
+.toggle-switch.yearly .toggle-labels span:last-child {
+  color: #1f4d91;
+}
+.toggle-thumb{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1f4d91;
+}
+.toggle-switch.yearly .toggle-thumb {
+  transform: translateX(110px);
+  
+}
+
+.toggle-switch.monthly .toggle-thumb {
+  transform: translateX(10px);
+}
+
+/* YourPlan CSS */
+/* Your Plan */
+
+.yourplan {
+  padding: 20px;
+  margin: 200px auto;
+  border-radius: 10px;
+  font-weight: bolder;
+  width: 500px;
+  background-color: #ffffff;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.plan-status {
+  display: flex;
+  justify-content: space-between;
+}
+
+.activeStatus {
+  font-size: 8px;
+  font-weight: bolder;
+  width: fit-content;
+  font-weight: bolder;
+  height: fit-content;
+  color: #1f4d91;
+  letter-spacing: 0.5pt;
+  margin-left: 0.3rem;
+  border-radius: 5px;
+  padding: 3px;
+  background-color: #bcd6fd;
+  margin-bottom: 1.5rem;
+}
+.cancelStatus {
+  font-size: 8px;
+  font-weight: bolder;
+  font-family: Poppins;
+  width: fit-content;
+  font-weight: bolder;
+  height: fit-content;
+  color: #721c24;
+  letter-spacing: 0.5pt;
+  margin-left: 0.3rem;
+  border-radius: 5px;
+  padding: 3px;
+  background-color: #f8d7da;
+  margin-bottom: 1.5rem;
+}
+
+.btn-cancel {
+  margin-bottom: 1.5rem;
+  border: none;
+  font-size: 9pt;
+  font-weight: bolder;
+  background-color: white;
+  color: #1f4d91;
+}
+.content {
+  font-size: 10pt;
+  margin-bottom: 0.5rem;
+  /* display: flex;
+  flex-direction: column;
+  jus */
+}
+.content-devices {
+  font-size: 9pt;
+  opacity: 0.6;
+}
+.icon {
+  content: "\f156";
+}
+.money {
+  /* font-family: Poppins; */
+  font-size: 20pt;
+  margin-bottom: 2rem;
+}
+
+.btn-plan {
+  border: none;
+  margin-top: 1rem;
+  font-size: 8pt;
+  font-weight: bolder;
+  background-color: white;
+  color: #1f4d91;
+  border: 1px solid #1f4d91;
+  border-radius: 3px;
+  padding: 6px 15px 6px 15px;
+}
+
+
+.plan-info {
+  /* border: none; */
+  margin: 1rem 0 1rem 0;
+  font-size: 9pt;
+  background-color: #f5f5f5;
+  padding: 8px;
+  border-radius: 5px;
 }
